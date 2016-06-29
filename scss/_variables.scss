@@ -1,9 +1,36 @@
 /**
  * BreakPoints
  */
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+// I don't know how to use them...
+
 $mobile: 767px;
 $desktop: $mobile+1;
 
+$break-xs: 0;
+$break-sm: 544px;
+$break-md: 768px; // => desktop
+$break-lg: 992px;
+$break-xl: 1200px;
 
+
+$globalPadding: 1.387em;
+
+
+// Colors
+$white: #fff;
+$wineRed: #7C0029;
 
 $content-background-color: hsla(0,0%,90%,1); // #fff;

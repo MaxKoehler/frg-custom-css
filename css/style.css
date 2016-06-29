@@ -10,452 +10,170 @@
  * BreakPoints
  */
 /**
- * Site-Content Background
+ * Typography
  */
-.content-area,
-.widget-area {
-  background-color: #e6e6e6; }
+/**
+ * Fix ShareDaddy Title Font-Size
+ */
+div.sharedaddy h3.sd-title {
+  margin: 0 0 1em;
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 1.188em;
+  font-weight: 700; }
+
+p + h2 {
+  margin-top: 1em; }
+
+body {
+  background: tomato; }
+
+/**
+ * Main Container Class
+ */
+.col-full {
+  max-width: 67.141em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2.774em;
+  box-sizing: content-box; }
+  .col-full:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+@media (max-width: 67.141em) {
+  .col-full {
+    margin-left: 2.774em;
+    margin-right: 2.774em;
+    padding: 0; } }
+@media (max-width: 568px) {
+  .col-full {
+    margin-left: 1.387em;
+    margin-right: 1.387em;
+    padding: 0; } }
+/**
+ * Content Box Layout, to create full-width containers
+ */
+.content-box {
+  margin-left: -1.387em;
+  margin-right: -1.387em;
+  padding: 1.387em;
+  margin-bottom: 1.618em; }
+
+@media (min-width: 569px) {
+  .content-box {
+    margin-left: -2.774em;
+    margin-right: -2.774em;
+    padding: 2.774em; } }
+@media (min-width: 768px) {
+  .content-box {
+    margin-left: -1.387em;
+    margin-right: -1.387em;
+    padding: 1.387em;
+    border-radius: 3px; } }
+.content-box > :last-child {
+  margin-bottom: 0; }
+
+/**
+ * Content Box Layout, to create full-width containers
+ */
+.content-box-no-padding {
+  margin-left: -1.387em;
+  margin-right: -1.387em;
+  padding: 0;
+  margin-bottom: 1.618em; }
+
+@media (min-width: 569px) {
+  .content-box-no-padding {
+    margin-left: -2.774em;
+    margin-right: -2.774em;
+    padding: 0; } }
+@media (min-width: 768px) {
+  .content-box-no-padding {
+    margin-left: -1.387em;
+    margin-right: -1.387em;
+    padding: 0; } }
+/**
+ * Actually an padding-only box. :O
+ */
+.content-block {
+  padding: 1.387em; }
+
+@media (min-width: 569px) {
+  .content-block {
+    padding: 2.774em; } }
+@media (min-width: 768px) {
+  .content-block {
+    padding: 1.387em; } }
+@media (min-width: 992px) {
+  .content-block {
+    padding: 2.774em; } }
+.content-block > :last-child {
+  margin-bottom: 0; }
 
 @media (min-width: 768px) {
   body {
-    background-color: pink; } }
-@media (min-width: 768px) {
+    background-image: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/05/purty_wood.png); }
+
   .content-area,
   .widget-area {
-    padding: 1.618em;
+    background-color: #e6e6e6;
+    padding: 1.387em;
     border-radius: 5px; } }
 /*
 => Dann ben├Âtigt das Standard Template Content+Sidebar wei├ƒen Hintergrund...
  */
-.content-area {
-  padding: 40px 40px 10px !important;
-  margin-right: 20px !important; }
-
-.content-area {
-  padding: 40px;
-  margin-right: 20px !important; }
-
-.hentry {
-  margin: 0; }
-
 /**
- * Hide the entry header on specific pages
+ * Site-Logo
  */
-.home .entry-header,
-.page-produkte .entry-header {
+.site-header .custom-logo-link {
+  width: 250px;
+  height: 250px;
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/FRG-Logo-Redesign.png) no-repeat;
+  background-size: contain;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin-left: -10px; }
+
+.site-header .custom-logo-link img {
   display: none; }
 
-/* ├£ber uns */
-.page-ueber-uns .list-employees {
-  margin-left: 0;
-  list-style: none; }
-
-@media (min-width: 569px) {
-  .page-ueber-uns .list-employees {
-    position: relative; }
-
-  .page-ueber-uns .list-employees img {
-    position: absolute;
-    left: 0; }
-
-  .page-ueber-uns .list-employees > li {
-    /* 132 (image) + 16 (1em) = 148px */
-    margin-left: 148px; } }
-/**
- * Image List (Das Team)...
- */
-/*
-Probleme bei Namensgebung, ob entweder ├╝ber .page-das-team oder, und einer Container Klasse oder einer Klasse f├╝r die spezielle Liste... Oder als :first-child, aber das macht irgendwie wenig Sinn? Villeicht doch...
- */
-.page-ueber-uns .entry-content ul {
-  /*margin: 0 0 1.618em 3em;*/
-  /*margin-left: calc(1.618em*9.5);*/
-  /* First Mobile List */
-  /* margin-left: 0; */
-  /* list-style: none; */ }
-
-.page-ueber-uns .entry-content ul li {
-  /* position: relative; */
-  /* display: flex; */
-  /* flex-direction: column; */ }
-
-.page-ueber-uns .entry-content ul li p:last-child {
-  /*order: -1;*/
-  /* Set as 1. Element */
-  /*position: absolute;*/
-  /*left: 0;*/
-  /*top: 0;*/
-  /*width: calc(1.618em*9);*/
-  /*transform: translateX(calc(-100% - 1.618em*0.5));*/ }
-
-.page-ueber-uns .entry-content ul li p:last-child img {
-  /* max-width: 100%; */
-  /* width: 100%; */
-  /* height: auto; */
-  /*border-width: calc(1.618em*2);*/
-  /*border-style: solid;*/ }
-
-.page-ueber-uns .entry-content ul li:first-child p:last-child img {
-  /* border-color: #6fcbf3; */
-  /* Light-Blue */ }
-
-.page-ueber-uns .entry-content ul li:nth-child(2) p:last-child img {
-  /* border-color: #004a7c; */
-  /* Dark-Blue */ }
-
-.page-ueber-uns .entry-content ul li:last-child p:last-child img {
-  /* border-color: #e99900; */
-  /* Dark-Blue */ }
-
-/**
- * Produkte Start
- */
-/*
-- Pretty messed up... could also need better syntax inside the html editor...
-- no time!!!
-- not much sence to change this now...
-
--> UX/UI Thing:
-- Now when you go to a specific product preview page out of the start product page, the Site-Title that has been overlaying the presentational image, gets pushed below it, as usual. Now you would have to make it also an Overlay, but bigger font-size... that would be the best case. OR not define the overlay... but its more handy and makes alot of sense, because the image is not that important, it plays together, you can use the image as an definition of the product type still, although there is text overlaying it. Therefore it makes much sense...
-=> So the logical consequence is to create an card text overlay for the product sub-pages as well...
- */
-.page-produkte .entry-content .wp-caption {
-  position: relative;
-  overflow: hidden; }
-
-.page-produkte .entry-content .wp-caption .wp-caption-text {
+.header-icons-container {
   position: absolute;
-  /* Absolute position the element... */
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* ...to the bottom of the parent container, if not set to static (default) => relative */
-  padding: 0;
-  /* Set padding to the link element, so there is no non-linking space */
-  border: none;
-  /*background-color: hsla(0,0%,100%,.5);*/
-  /* White */
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Black */
-  border-radius: 0 0 3px 3px; }
-
-.page-produkte .entry-content .wp-caption .wp-caption-text a {
-  display: block;
-  padding: .75rem 1.25rem;
-  /* Default Heading Style */
-  /*color: #484c51;*/
-  /* Black */
-  color: #fff;
-  /* White */
-  /*font-size: 1.618em;*/
-  /* h3 */
-  /* This should really be done through a class, so that you can then in the end define a smaller font-size for headlines, etc. for mobile... */
-  /* Do it! */
-  /* Aaaand the class is: .gamma or .h3 => .h3 seems more logical... but for now it is .gamma.. */
-  /* .h3 is inside bootstrap and also sets margin-bottom... => Would have to get negated then... */
-  /* .gamma is this 1.618em and .h3 is 1.75rem, maybe generally it is a good idea to use rem for this kind, so it is always the same size and not dependand on other stuff... */
-  /* Example: Sidebar .h3 will then become the original h3, but it should be smaller? -_- */
-  font-family: 'Yanone Kaffeesatz';
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 1px; }
-
-.page-produkte .entry-content .wp-caption .wp-caption-text a:hover,
-.page-produkte .entry-content .wp-caption .wp-caption-text a:focus {
-  text-decoration: none;
-  color: #fff
-  /* White */ }
-
-/* Default WordPress Caption Styles */
-.wp-caption .wp-caption-text {
-  /*text-align: left;*/
-  /*font-style: italic;*/
-  /*border-bottom: 2px solid rgba(0,0,0,.05);*/
-  /*padding: 1em 0;*/ }
-
-/* Produkte */
-.main-selection-container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% + 60px);
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: 30px;
-  margin-top: -30px; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 5px;
+  right: 5px; }
 
-.main-selection-item {
-  max-width: calc(50% - 20px);
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-  margin: 10px;
-  border-radius: 3px; }
-
-.main-selection-container a h1 {
-  color: #fff !important;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  font-weight: 500;
-  font-size: 45px;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px dotted white;
-  margin: 0; }
-
-.main-selection-container a img {
-  width: auto;
-  height: 100%;
-  max-width: initial; }
-
-.start .sharedaddy {
-  margin-top: 0; }
-
-.panorama {
-  height: 360px;
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/360.jpg) center;
-  position: relative;
-  overflow: hidden; }
-
-.intro > * {
-  z-index: 1;
-  position: relative; }
-
-.intro {
-  color: white !important;
-  margin: auto;
-  padding-left: 40px;
-  padding-top: 50px; }
-
-.intro:after {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7C0029), color-stop(100, #A0002E));
-  background-image: -webkit-linear-gradient(bottom, #7C0029 0%, #A0002E 100%);
-  background-image: linear-gradient(to top, #7C0029 0%, #A0002E 100%);
-  content: "";
-  width: 680px;
-  height: 680px;
-  display: block;
-  position: absolute;
-  border-radius: 340px;
-  top: -170px;
-  left: -340px;
-  z-index: 0;
-  opacity: .95; }
-
-.schritte {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: relative; }
-
-.schritt-2 {
-  border-left: 1px dotted rgba(0, 0, 0, 0.2);
-  border-right: 1px dotted rgba(0, 0, 0, 0.2); }
-
-.schritte:before, .schritte:after {
-  content: "";
-  display: block;
-  width: 100%;
-  position: absolute;
-  background: white;
-  height: 40px; }
-
-.schritte:after {
-  bottom: 0;
-  left: 0; }
-
-.schritte > div {
-  width: 33.33%;
-  padding: 40px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-
-.schritte h2 {
-  width: auto;
-  padding-top: 20px;
-  height: 70px; }
-
-.schritte p {
-  margin-bottom: 10px;
-  z-index: 1; }
-
-.schritte > div > h2 {
-  border-bottom: 1px dotted; }
-
-.icon-1, .icon-2, .icon-3 {
-  width: 90px;
-  height: 90px;
-  border-radius: 45px;
-  position: relative;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  margin-right: 10px;
-  -webkit-transform: translate(-10px);
-      -ms-transform: translate(-10px);
-          transform: translate(-10px);
-  margin-bottom: 20px; }
-
-.icon-1:before, .icon-2:before, .icon-3:before {
-  width: 100%;
-  height: 100%;
-  content: "";
-  position: absolute; }
-
-.icon-1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #004A7C), color-stop(100, #0067ad));
-  background-image: -webkit-linear-gradient(bottom, #004A7C 0%, #0067ad 100%);
-  background-image: linear-gradient(to top, #004A7C 0%, #0067ad 100%); }
-
-.icon-1:before {
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-1.svg); }
-
-.schritt-1 h2 {
-  color: #004a7c !important; }
-
-.icon-2 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E99900), color-stop(100, #f2c100));
-  background-image: -webkit-linear-gradient(bottom, #E99900 0%, #f2c100 100%);
-  background-image: linear-gradient(to top, #E99900 0%, #f2c100 100%); }
-
-.icon-2:before {
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-2.svg); }
-
-.schritt-2 h2 {
-  color: #e99900 !important; }
-
-.icon-3 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #007c06), color-stop(100, #00AD08));
-  background-image: -webkit-linear-gradient(bottom, #007c06 0%, #00AD08 100%);
-  background-image: linear-gradient(to top, #007c06 0%, #00AD08 100%); }
-
-.icon-3:before {
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-3.svg); }
-
-.schritt-3 h2 {
-  color: #007C06 !important; }
-
-/************************************/
-/* J - CSS */
-/************************************/
-/* pages without featured image */
-/**
- * Pages with a featured image
- */
-article.has-post-thumbnail .entry-title {
-  background: lime; }
-
-.entry-content {
-  border-top: 1px dotted rgba(0, 0, 0, 0.2);
-  padding-top: 40px; }
-
-body {
-  opacity: 0; }
-
-@-webkit-keyframes rotating-function {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-@-ms-keyframes rotating-function {
-  from {
-    -ms-transform: rotate(0deg); }
-  to {
-    -ms-transform: rotate(360deg); } }
-@keyframes rotating-function {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-body:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/FRG-Loader-1.svg) no-repeat;
-  top: 500px;
-  left: calc(50% - 70px);
-  -ms-animation: rotating-function 5s linear infinite;
-  -webkit-animation: rotating-function 5s linear infinite;
-          animation: rotating-function 5s linear infinite;
-  z-index: -1; }
-
-/* BACK TO TOP */
-#wpfront-scroll-top-container {
-  width: 60px;
-  height: 60px; }
-
-#wpfront-scroll-top-container img {
-  display: none; }
-
-#wpfront-scroll-top-container:before,
-#wpfront-scroll-top-container:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  border-radius: 100px; }
-
-#wpfront-scroll-top-container:before {
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/back-to-top.svg);
-  z-index: 1; }
-
-#wpfront-scroll-top-container:after {
-  z-index: 0;
-  background: white;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
-  opacity: .8;
+.header-icons-container > a {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
   -webkit-transition: all .5s ease;
           transition: all .5s ease; }
 
-#wpfront-scroll-top-container:hover:after {
-  opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out; }
+.header-icons-container > a:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .15s ease-in-out;
+          transition: all .15s ease-in-out; }
 
-#slideshow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  border-bottom: 1px solid white; }
+.header-icons-container > a > div {
+  height: 100%; }
 
-#slideshow:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: white;
-  bottom: -2px;
-  position: absolute; }
+.header-icon-1 {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/header-icon-googlemaps.svg); }
 
-#slideshow > div {
-  position: absolute;
-  width: 100%; }
-
-#slideshow img {
-  max-width: 1920px;
-  max-height: 360px;
-  left: calc(50% - 960px);
-  position: absolute; }
+.header-icon-2 {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/header-icon-fb.svg); }
 
 .storefront-primary-navigation {
   clear: both;
@@ -707,6 +425,402 @@ body:after {
   .main-navigation ul ul .current_page_item > a:hover {
     background: #004a7c !important;
     color: white !important; } }
+/**
+ * Page Layout
+ */
+/**
+ * Only Pages not Posts/Single-Posts?
+ */
+/**
+ * Pages with a featured image
+ */
+article.has-post-thumbnail .entry-title {
+  background: lime; }
+
+/* pages without featured image */
+/**
+ * Contrast Typography // => make text white
+ */
+.contrast {
+  color: white; }
+
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6 {
+  color: inherit; }
+
+/**
+ * Custom Background Classes
+ */
+/**
+ * Dynamic Background Colors
+ */
+/**
+ * Constant Background Colors
+ */
+/**
+ * Borders
+ */
+/* ├£ber uns */
+.page-ueber-uns .list-employees {
+  margin-left: 0;
+  list-style: none; }
+
+@media (min-width: 569px) {
+  .page-ueber-uns .list-employees {
+    position: relative; }
+
+  .page-ueber-uns .list-employees img {
+    position: absolute;
+    left: 0; }
+
+  .page-ueber-uns .list-employees > li {
+    /* 132 (image) + 16 (1em) = 148px */
+    margin-left: 148px; } }
+/**
+ * Image List (Das Team)...
+ */
+/*
+Probleme bei Namensgebung, ob entweder ├╝ber .page-das-team oder, und einer Container Klasse oder einer Klasse f├╝r die spezielle Liste... Oder als :first-child, aber das macht irgendwie wenig Sinn? Villeicht doch...
+ */
+.page-ueber-uns .entry-content ul {
+  /*margin: 0 0 1.618em 3em;*/
+  /*margin-left: calc(1.618em*9.5);*/
+  /* First Mobile List */
+  /* margin-left: 0; */
+  /* list-style: none; */ }
+
+.page-ueber-uns .entry-content ul li {
+  /* position: relative; */
+  /* display: flex; */
+  /* flex-direction: column; */ }
+
+.page-ueber-uns .entry-content ul li p:last-child {
+  /*order: -1;*/
+  /* Set as 1. Element */
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*top: 0;*/
+  /*width: calc(1.618em*9);*/
+  /*transform: translateX(calc(-100% - 1.618em*0.5));*/ }
+
+.page-ueber-uns .entry-content ul li p:last-child img {
+  /* max-width: 100%; */
+  /* width: 100%; */
+  /* height: auto; */
+  /*border-width: calc(1.618em*2);*/
+  /*border-style: solid;*/ }
+
+.page-ueber-uns .entry-content ul li:first-child p:last-child img {
+  /* border-color: #6fcbf3; */
+  /* Light-Blue */ }
+
+.page-ueber-uns .entry-content ul li:nth-child(2) p:last-child img {
+  /* border-color: #004a7c; */
+  /* Dark-Blue */ }
+
+.page-ueber-uns .entry-content ul li:last-child p:last-child img {
+  /* border-color: #e99900; */
+  /* Dark-Blue */ }
+
+/**
+ * Produkte Start
+ */
+/*
+- Pretty messed up... could also need better syntax inside the html editor...
+- no time!!!
+- not much sence to change this now...
+
+-> UX/UI Thing:
+- Now when you go to a specific product preview page out of the start product page, the Site-Title that has been overlaying the presentational image, gets pushed below it, as usual. Now you would have to make it also an Overlay, but bigger font-size... that would be the best case. OR not define the overlay... but its more handy and makes alot of sense, because the image is not that important, it plays together, you can use the image as an definition of the product type still, although there is text overlaying it. Therefore it makes much sense...
+=> So the logical consequence is to create an card text overlay for the product sub-pages as well...
+ */
+.page-produkte .entry-content .wp-caption {
+  position: relative;
+  overflow: hidden; }
+
+.page-produkte .entry-content .wp-caption .wp-caption-text {
+  position: absolute;
+  /* Absolute position the element... */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* ...to the bottom of the parent container, if not set to static (default) => relative */
+  padding: 0;
+  /* Set padding to the link element, so there is no non-linking space */
+  border: none;
+  /*background-color: hsla(0,0%,100%,.5);*/
+  /* White */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black */
+  border-radius: 0 0 3px 3px; }
+
+.page-produkte .entry-content .wp-caption .wp-caption-text a {
+  display: block;
+  padding: .75rem 1.25rem;
+  /* Default Heading Style */
+  /*color: #484c51;*/
+  /* Black */
+  color: #fff;
+  /* White */
+  /*font-size: 1.618em;*/
+  /* h3 */
+  /* This should really be done through a class, so that you can then in the end define a smaller font-size for headlines, etc. for mobile... */
+  /* Do it! */
+  /* Aaaand the class is: .gamma or .h3 => .h3 seems more logical... but for now it is .gamma.. */
+  /* .h3 is inside bootstrap and also sets margin-bottom... => Would have to get negated then... */
+  /* .gamma is this 1.618em and .h3 is 1.75rem, maybe generally it is a good idea to use rem for this kind, so it is always the same size and not dependand on other stuff... */
+  /* Example: Sidebar .h3 will then become the original h3, but it should be smaller? -_- */
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px; }
+
+.page-produkte .entry-content .wp-caption .wp-caption-text a:hover,
+.page-produkte .entry-content .wp-caption .wp-caption-text a:focus {
+  text-decoration: none;
+  color: #fff
+  /* White */ }
+
+/* Default WordPress Caption Styles */
+.wp-caption .wp-caption-text {
+  /*text-align: left;*/
+  /*font-style: italic;*/
+  /*border-bottom: 2px solid rgba(0,0,0,.05);*/
+  /*padding: 1em 0;*/ }
+
+/* Produkte */
+.main-selection-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% + 60px);
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: 30px;
+  margin-top: -30px; }
+
+.main-selection-item {
+  max-width: calc(50% - 20px);
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 3px; }
+
+.main-selection-container a h1 {
+  color: #fff !important;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-weight: 500;
+  font-size: 45px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted white;
+  margin: 0; }
+
+.main-selection-container a img {
+  width: auto;
+  height: 100%;
+  max-width: initial; }
+
+/**
+ * Panorama Box
+ */
+.frg-panorama {
+  background: rgba(0, 0, 0, 0.125); }
+  .frg-panorama > .content-block {
+    display: inline-block;
+    background-color: #7C0029; }
+  @media (min-width: 544px) {
+    .frg-panorama .intro {
+      max-width: 16em; } }
+  .frg-panorama .intro p:last-child {
+    margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .frg-panorama {
+    background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/360.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden; }
+    .frg-panorama > .content-block {
+      position: relative;
+      background-color: transparent; }
+      .frg-panorama > .content-block:after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        padding-top: 200%;
+        border-radius: 50%;
+        top: -50%;
+        left: -100%;
+        background: #7C0029;
+        background: -webkit-linear-gradient(bottom, #7C0029 0%, #A0002E 100%);
+        background: linear-gradient(to top, #7C0029 0%, #A0002E 100%);
+        opacity: .9; }
+    .frg-panorama .intro {
+      position: relative;
+      z-index: 1; } }
+/**
+ * Schritte...
+ */
+.schritte {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative; }
+
+.schritt-2 {
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
+  border-right: 1px dotted rgba(0, 0, 0, 0.2); }
+
+.schritte:before, .schritte:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  background: white;
+  height: 40px; }
+
+.schritte:after {
+  bottom: 0;
+  left: 0; }
+
+.schritte > div {
+  width: 33.33%;
+  padding: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.schritte h2 {
+  width: auto;
+  padding-top: 20px;
+  height: 70px; }
+
+.schritte p {
+  margin-bottom: 10px;
+  z-index: 1; }
+
+.schritte > div > h2 {
+  border-bottom: 1px dotted; }
+
+.icon-1, .icon-2, .icon-3 {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  position: relative;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin-right: 10px;
+  -webkit-transform: translate(-10px);
+      -ms-transform: translate(-10px);
+          transform: translate(-10px);
+  margin-bottom: 20px; }
+
+.icon-1:before, .icon-2:before, .icon-3:before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute; }
+
+.icon-1 {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #004A7C), color-stop(100, #0067ad));
+  background-image: -webkit-linear-gradient(bottom, #004A7C 0%, #0067ad 100%);
+  background-image: linear-gradient(to top, #004A7C 0%, #0067ad 100%); }
+
+.icon-1:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-1.svg); }
+
+.schritt-1 h2 {
+  color: #004a7c !important; }
+
+.icon-2 {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #E99900), color-stop(100, #f2c100));
+  background-image: -webkit-linear-gradient(bottom, #E99900 0%, #f2c100 100%);
+  background-image: linear-gradient(to top, #E99900 0%, #f2c100 100%); }
+
+.icon-2:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-2.svg); }
+
+.schritt-2 h2 {
+  color: #e99900 !important; }
+
+.icon-3 {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #007c06), color-stop(100, #00AD08));
+  background-image: -webkit-linear-gradient(bottom, #007c06 0%, #00AD08 100%);
+  background-image: linear-gradient(to top, #007c06 0%, #00AD08 100%); }
+
+.icon-3:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-3.svg); }
+
+.schritt-3 h2 {
+  color: #007C06 !important; }
+
+/**
+ * Sidebar
+ */
+/**
+ * Widgets
+ */
+/**
+ * Widget-Title
+ */
+/* Storefront Default */
+.widget h2.widgettitle,
+.widget h3.widget-title {
+  font-size: 1.387em;
+  letter-spacing: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0 0 1em;
+  margin-bottom: 1em;
+  font-weight: 700; }
+
+/* Fix */
+.widget h2.widgettitle,
+.widget h3.widget-title {
+  font-size: 1.387em;
+  letter-spacing: 1px; }
+
+/**
+ * Site-Footer
+ */
+/**
+ * Site-Footer - Typography
+ */
+.site-footer {
+  background-color: #f0f0f0;
+  color: #61656b;
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/concrete-2.jpg); }
+
+.site-footer h3 {
+  color: #7c0029;
+  font-size: 1.75em;
+  margin-bottom: 1.5rem; }
+
+.site-footer h4 {
+  color: #002b48; }
+
+.widget {
+  background: rgba(0, 0, 0, 0.125); }
+
 .claim {
   font-family: 'Yanone Kaffeesatz';
   font-style: normal;
@@ -749,62 +863,102 @@ body:after {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
   margin-top: -.15em; }
 
-.site-header {
-  padding: 0;
-  height: 360px;
-  margin-bottom: 50px; }
+#slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-bottom: 1px solid white; }
 
-.site-header .custom-logo-link {
-  width: 250px;
-  height: 250px;
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/FRG-Logo-Redesign.png) no-repeat;
-  background-size: contain;
-  border: 10px solid rgba(255, 255, 255, 0.3);
-  border-radius: 125px;
-  margin-left: -10px; }
+#slideshow:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  bottom: -2px;
+  position: absolute; }
 
-.site-header .custom-logo-link img {
+#slideshow > div {
+  position: absolute;
+  width: 100%; }
+
+#slideshow img {
+  max-width: 1920px;
+  max-height: 360px;
+  left: calc(50% - 960px);
+  position: absolute; }
+
+body {
+  opacity: 0; }
+
+@-webkit-keyframes rotating-function {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-ms-keyframes rotating-function {
+  from {
+    -ms-transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg); } }
+@keyframes rotating-function {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+body:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/FRG-Loader-1.svg) no-repeat;
+  top: 500px;
+  left: calc(50% - 70px);
+  -ms-animation: rotating-function 5s linear infinite;
+  -webkit-animation: rotating-function 5s linear infinite;
+          animation: rotating-function 5s linear infinite;
+  z-index: -1; }
+
+/* BACK TO TOP */
+#wpfront-scroll-top-container {
+  width: 60px;
+  height: 60px; }
+
+#wpfront-scroll-top-container img {
   display: none; }
 
-.header-icons-container {
+#wpfront-scroll-top-container:before,
+#wpfront-scroll-top-container:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
   position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  bottom: 5px;
-  right: 5px; }
+  top: 0;
+  border-radius: 100px; }
 
-.header-icons-container > a {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+#wpfront-scroll-top-container:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/back-to-top.svg);
+  z-index: 1; }
+
+#wpfront-scroll-top-container:after {
+  z-index: 0;
+  background: white;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+  opacity: .8;
   -webkit-transition: all .5s ease;
           transition: all .5s ease; }
 
-.header-icons-container > a:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all .15s ease-in-out;
-          transition: all .15s ease-in-out; }
-
-.header-icons-container > a > div {
-  height: 100%; }
-
-.header-icon-1 {
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/header-icon-googlemaps.svg); }
-
-.header-icon-2 {
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/header-icon-fb.svg); }
-
-/* CONTENT */
-.home .entry-title {
-  display: block; }
+#wpfront-scroll-top-container:hover:after {
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out; }
 
 .sharedaddy {
   border-top: 1px dotted rgba(0, 0, 0, 0.2);
@@ -895,101 +1049,11 @@ body:after {
 .share-google-plus-1 a:after {
   background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/icon-googleplus-w.svg); }
 
-.site-content div.col-full,
-.site-footer div.col-full {
-  max-width: 100%;
-  width: 1100px;
-  padding: 0;
-  /*
-  margin-left: 20px !important;
-  margin-right: 20px !important;
-  */
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.widget-area {
-  width: 25%; }
-
-.site-content {
-  min-height: 90vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-/* FOOTER */
-.footer-widgets {
-  padding-top: 30px;
-  border-bottom: 1px solid #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 60px 20px 0; }
-
-.footer-widgets .block {
-  width: 33.33% !important;
-  margin-right: 0 !important;
-  padding: 0 40px; }
-
-.site-footer {
-  background-color: #f0f0f0;
-  color: #61656b;
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/concrete-2.jpg);
-  padding: 0 40px !important;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-top: 1px solid white;
-  position: relative; }
-
-.site-footer div.col-full {
-  display: block;
-  margin: 0; }
-
-.site-footer h3 {
-  color: #7c0029 !important;
-  font-size: 28px;
-  margin-bottom: 25px; }
-
-.site-footer h4 {
-  color: #002b48; }
-
-.site-footer p, .site-footer a {
-  color: black !important; }
-
-.site-footer a {
-  font-weight: 500; }
-
-.site-info {
-  padding: 40px 0;
-  text-align: center; }
-
-.site-footer:after {
-  content: "" !important;
-  display: block;
-  height: 200px;
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Fahrrad-frei-Zusatzzeichen_1022-10.svg) no-repeat;
-  width: 100%;
-  background-position: center;
-  background-size: 150px;
-  position: absolute;
-  left: 0;
-  bottom: 50px; }
+/**
+ * Hide the entry header on specific pages
+ */
+.home .entry-header,
+.page-produkte .entry-header {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

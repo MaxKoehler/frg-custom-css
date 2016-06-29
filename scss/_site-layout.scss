@@ -1,22 +1,151 @@
+body {
+  background: tomato; // hsla(240,75%,75%,1);
+}
+
 /**
- * Site-Content Background
+ * Main Container Class
  */
+.col-full {
+  max-width: 67.141em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $globalPadding*2; // 2.618em; // 2em; //
+  box-sizing: content-box;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@media (max-width: 67.141em) {
+  .col-full {
+    margin-left: $globalPadding*2; // 2.618em; // 2em; //
+    margin-right: $globalPadding*2; // 2.618em; // 2em; //
+    padding:0
+  }
+}
+@media (max-width: 568px) {
+  .col-full {
+    margin-left: $globalPadding; // 1.387em; // 1em; // 1.387em;
+    margin-right: $globalPadding; // 1.387em; // 1em; // 1.387em;
+    padding:0
+  }
+}
+
+/**
+ * Content Box Layout, to create full-width containers
+ */
+.content-box {
+  margin-left: -$globalPadding; // -1.387em;
+  margin-right: -$globalPadding; // -1.387em;
+  padding: $globalPadding; // 1.387em;
+  margin-bottom: 1.618em;
+}
+@media (min-width: 569px) {
+  .content-box {
+    margin-left: -$globalPadding*2; // -2.618em;
+    margin-right: -$globalPadding*2; // -2.618em;
+    padding: $globalPadding*2; // 2.618em;
+  }
+}
+@media (min-width: $desktop) {
+  .content-box {
+    margin-left: -$globalPadding; // 0; // why 0?
+    margin-right: -$globalPadding; // 0;
+    padding: $globalPadding; // 1.618em;
+    border-radius: 3px;
+  }
+}
+.content-box > :last-child {
+  margin-bottom: 0;
+}
+
+
+/**
+ * Content Box Layout, to create full-width containers
+ */
+.content-box-no-padding {
+  margin-left: -$globalPadding; // -1.387em;
+  margin-right: -$globalPadding; // -1.387em;
+  padding: 0; // $globalPadding; // 1.387em;
+  margin-bottom: 1.618em;
+}
+@media (min-width: 569px) {
+  .content-box-no-padding {
+    margin-left: -$globalPadding*2; // -2.618em;
+    margin-right: -$globalPadding*2; // -2.618em;
+    padding: 0; //  $globalPadding*2; // 2.618em;
+  }
+}
+@media (min-width: $desktop) {
+  .content-box-no-padding {
+    margin-left: -$globalPadding; // 0; // why 0?
+    margin-right: -$globalPadding; // 0;
+    padding: 0; // $globalPadding; // 1.618em;
+    // border-radius: 3px; // hmm why have this here?
+  }
+}
+// .content-box-no-padding > :last-child {
+//   margin-bottom: 0;
+// }
+
+
+/**
+ * Actually an padding-only box. :O
+ */
+.content-block {
+  padding: $globalPadding;
+}
+@media (min-width: 569px) {
+  .content-block {
+    padding: $globalPadding*2;
+  }
+}
+@media (min-width: $desktop) {
+  .content-block {
+    padding: $globalPadding;
+  }
+}
+@media (min-width: $break-lg) {
+  .content-block {
+    padding: $globalPadding*2;
+  }
+}
+.content-block > :last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .content-area,
 .widget-area {
-  background-color: $content-background-color;
+  // background-color: $content-background-color;
+  // => This is not the content-background color for mobile!
 }
 
 @media (min-width: $desktop) {
   body {
-    // background-image: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/05/purty_wood.png);
-    background-color: pink;
+    background-image: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/05/purty_wood.png);
+    // background-color: pink;
   }
-}
 
-@media (min-width: $desktop) {
   .content-area,
   .widget-area {
-    padding: 1.618em;
+    // This is the correct content/sidebar background for desktop+
+    background-color: $content-background-color;
+
+    // Now for desktop add the global padding to the content/widget area
+    padding: $globalPadding;
     border-radius: 5px;
   }
 }
@@ -25,14 +154,14 @@
  */
 
 .content-area {
-  padding: 40px 40px 10px !important;
-  margin-right: 20px !important;
+  // padding: 40px 40px 10px !important;
+  // margin-right: 20px !important;
 }
 .content-area {
-  padding: 40px;
-  margin-right: 20px !important;
+  // padding: 40px;
+  // margin-right: 20px !important;
 }
 
 .hentry {
-  margin: 0;
+  // margin: 0;
 }

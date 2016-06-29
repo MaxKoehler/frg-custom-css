@@ -1,0 +1,113 @@
+/**
+ * Page Layout
+ */
+
+
+.hentry .entry-header {
+  // margin-bottom: 1em;
+  // border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.hentry .entry-header {
+    // margin-bottom: 2.618em;
+}
+
+
+.hentry {
+
+  .entry-header {
+    // border-bottom: 1px dotted rgba(0,0,0,0.2);
+
+    .entry-title {
+
+    }
+  }
+
+  .entry-content {
+
+  }
+}
+
+/**
+ * Only Pages not Posts/Single-Posts?
+ */
+.hentry.type-page .entry-header {
+  // border-bottom: 0;
+  // margin-bottom: 0;
+}
+
+
+/**
+ * Pages with a featured image
+ */
+article.has-post-thumbnail {
+  .entry-title {
+    background: lime;
+  }
+}
+
+.entry-header {
+  // border-bottom: 0;
+  // margin-bottom: 30px !important;
+  // margin-left: -20px;
+  // width: calc(100% + 40px);
+  // margin-top: -20px;
+  // border: none !important;
+  // max-height: 553px;
+  // overflow: hidden;
+  // position: relative;
+}
+
+
+/* pages without featured image */
+
+
+
+.page-service .entry-header,
+.page-ueber-uns .entry-header,
+.page-kontakt .entry-header {
+  // border-bottom: 0;
+  // max-height: 500px;
+  // overflow: hidden;
+  // margin-bottom: 30px !important;
+  // position: relative;
+  // margin-top: 0;
+}
+
+
+
+
+h1.entry-title {
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  // background: white;
+  // margin: 0;
+  // padding-top: 30px;
+  // padding-left: 20px;
+}
+
+
+
+.entry-content {
+  // padding-top: 40px;
+}
+
+.home .entry-content,
+.page-produkte .entry-content {
+  // border-top: none;
+  // padding-top: 0;
+}
+
+
+
+.page-service h1,
+.page-ueber-uns h1,
+.page-kontakt h1 {
+  // position: initial;
+  // bottom: initial;
+  // width: initial;
+  // background: initial;
+  // margin: initial;
+  // padding-top: initial;
+}

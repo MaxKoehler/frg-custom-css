@@ -1,63 +1,134 @@
-.home .content-area {
-  // width: 100% !important;
-  // max-width: 100% !important;
-  // padding: 20px !important;
-  // margin-right: 0 !important;
-}
-.home-main {
-  // margin-bottom: 0;
-}
+
+// Remove extra spacing from the bottom of the content-area
 .home .hentry,
 .home .site-main {
   // margin: 0;
 }
-
-
+// Remove extra spacing at the top of the share-daddy container
 .start .sharedaddy {
-  margin-top: 0;
+  // margin-top: 0;
+}
+
+/**
+ * Panorama Box
+ */
+// - White Text added via .contrast class
+
+.frg-panorama {
+  background: hsla(0,0%,0%,.125); // Temporary darker background
+
+  > .content-block {
+    display: inline-block;
+    background-color: $wineRed;
+  }
+
+  .intro {
+    // margin: 0 auto;
+    @media (min-width: $break-sm) {
+      max-width: 16em;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .frg-panorama {
+    background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/360.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    > .content-block {
+      position: relative;
+      background-color: transparent;
+
+      // The big red blob
+      &:after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        padding-top: 200%;
+        border-radius: 50%;
+        top: -50%;
+        left: -100%;
+        // transform: translateX($globalPadding); // slightly move it to the right...
+        // => Should have the global padding amount for that!
+
+        background: $wineRed; // rgba(170,0,255,0.75);
+        background: linear-gradient(to top,#7C0029 0%,#A0002E 100%); // Note: Koala handles prefixing...
+
+        opacity: .9;
+
+        // => Gets buggy at smaller sizes...
+        // min-width: 600px;
+      }
+    }
+
+    .intro {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }
 
 
-
-
-.panorama {
-  height: 360px;
-  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/360.jpg) center;
-  position: relative;
-  overflow: hidden;
+.frg-panorama {
+  > .content-block {
+    &:after {
+      // @media (min-width: $break-md) {
+      //   transform: translateX($globalPadding); // slightly move it to the right...
+      // }
+      // @media (min-width: $break-lg) {
+      //   transform: translateX($globalPadding*2); // slightly more move it to the right...
+      // }
+    }
+  }
 }
 
-.intro > * {
-  z-index: 1;
-  position: relative;
+
+.frg-panorama {
+  // min-height: 360px; // height will cut it of on mobile devices, when the height of the intro exceeds this.
+  // background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/360.jpg) center;
+  // position: relative;
+  // overflow: hidden;
 }
 
 .intro {
-  color: white !important;
-  margin: auto;
-  padding-left: 40px;
-  padding-top: 50px;
 }
+
+.intro > * {
+  // z-index: 1;
+  // position: relative;
+}
+
+.intro {
+  // margin: auto;
+  // padding-left: 40px;
+  // padding-top: 50px;
+}
+
 
 .intro:after {
-  background-image: -ms-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
-  background-image: -moz-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
-  background-image: -o-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#7C0029),color-stop(100,#A0002E));
-  background-image: -webkit-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
-  background-image: linear-gradient(to top,#7C0029 0%,#A0002E 100%);
-  content: "";
-  width: 680px;
-  height: 680px;
-  display: block;
-  position: absolute;
-  border-radius: 340px;
-  top: -170px;
-  left: -340px;
-  z-index: 0;
-  opacity: .95;
+  // content: "";
+  // display: block; // Should be display: block already? // => Ah no its inline, because its a pseudo element... my bad
+  // position: absolute;
+  // background: linear-gradient(to top,#7C0029 0%,#A0002E 100%); // Koala handles prefixing
+  // width: 680px;
+  // height: 680px;
+  // border-radius: 340px;
+  // top: -170px;
+  // left: -340px;
+  // z-index: 0;
+  // opacity: .95;
 }
 
+
+/**
+ * Schritte...
+ */
 .schritte {
   display: flex;
   align-items: flex-start;

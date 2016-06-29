@@ -1,0 +1,85 @@
+/*.three-steps-intro {
+}
+
+.three-steps-intro > i {
+}*/
+.bg-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-12.5%) translateY(42.5%);
+  transition: all .625s ease;
+}
+
+/* SlideOut (to right) for Mobile */
+@media (max-width: 568px) {
+  .bg-icon {
+    opacity: 0;
+    transform: translateX(106.75%) translateY(42.5%);
+  }
+
+  /* Adjust FontSize (smaller) */
+  .bg-icon.fa-x5 {
+  /*font-size: 4.75em;*/
+  }
+}
+
+/* Sliding in
+- Little too Slow (1.375s)*/
+.bg-bicycle .bg-icon {
+  animation-duration: 1.5s;
+  animation-name: slideIn;
+  animation-timing-function: ease-out;
+}
+
+.bg-container:hover .bg-icon,
+.bg-container:focus .bg-icon {
+/* animation-duration: 1s; */
+/* animation-name: slideOut; */
+/* animation-timing-function: ease-in; */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-37.5%) translateY(42.5%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-12.5%) translateY(42.5%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(-12.5%) translateY(42.5%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(106.75%) translateY(42.5%);
+  }
+}
+
+/*.bg-icon {
+  right: 1.387rem;
+}
+
+@media (min-width: 569px) {
+  .bg-icon {
+    right: 2.618rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bg-icon {
+    right: 1.618rem;
+  }
+}*/

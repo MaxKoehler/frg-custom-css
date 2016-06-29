@@ -1,0 +1,103 @@
+/**
+ * Content-Box-Contrast
+ */
+/*
+- Das größte Problem ist bei der Desktop-Darstellung, dass es echt kacke aussieht, wenn man zwei vertikale Text-Fluss Linien hat!... => Dazu siehe Mobil/Tablet, dort ist es nur eine vertikale Linie und es sieht sooo viel besser aus!... Aber wie soll man das machen bei Desktop, vor allem mit der Sidebar...
+  => Eine Lösung könnte sein, dass man halt NUR Content-Boxes verwendet... dann gibt es global über mehrere Seiten gesehen aber TROTZDEM 2 vertikale Textflusslinien... **?? Nennt man das so?...
+*/
+
+/**
+ * This is a very important class:
+ * - With this you can remove the left/right margin and create a full-width container for any content.
+ * => You can apply background-image/colors that span over the full width of the content-area!!!
+ */
+.content-box {
+  margin-left: -1.387em;
+  margin-right: -1.387em;
+  padding: 1.387em;
+  margin-bottom: 1.618em;
+}
+@media (min-width: 569px) {
+  .content-box {
+    margin-left: -2.618em;
+    margin-right: -2.618em;
+    padding: 2.618em;
+  }
+}
+@media (min-width: 768px) {
+  .content-box {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.618em;
+    border-radius: 3px;
+  }
+}
+.content-box > :last-child {
+  margin-bottom: 0;
+}
+
+
+
+.contrast {
+/*background: #6fcbf3;*/
+  color: white;
+}
+
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6 {
+  color: inherit;
+}
+
+/**
+ * Background Classes
+ */
+/**
+ * Dynamic Background Overlay
+ */
+.bg-darker {
+  background-color: hsla(0,0%,0%,.25);
+}
+
+.bg-lighter {
+  background-color: hsla(0,0%,100%,.25);
+}
+
+/**
+ * Constant Colors
+ */
+.bg-lightblue {
+  background-color: #6fcbf3;
+}
+
+.bg-blue {
+  background-color: #004a7c;
+}
+
+.bg-orange {
+  background-color: #e99900;
+}
+
+.bg-green {
+  background-color: #007c06;
+}
+
+.bg-darkgrey {
+  background-color: #484c51;
+}
+
+/*.bg-lightgrey {
+  background-color: hsla(0, 0%, 0%, .125);
+}*/
+.border {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #484c51;
+/*hsla(0, 0%, 0%, 1);*/
+}
+
+.contrast.border {
+}

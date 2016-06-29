@@ -1,0 +1,113 @@
+
+
+/**
+ * Produkte Start
+ */
+/*
+- Pretty messed up... could also need better syntax inside the html editor...
+- no time!!!
+- not much sence to change this now...
+
+-> UX/UI Thing:
+- Now when you go to a specific product preview page out of the start product page, the Site-Title that has been overlaying the presentational image, gets pushed below it, as usual. Now you would have to make it also an Overlay, but bigger font-size... that would be the best case. OR not define the overlay... but its more handy and makes alot of sense, because the image is not that important, it plays together, you can use the image as an definition of the product type still, although there is text overlaying it. Therefore it makes much sense...
+=> So the logical consequence is to create an card text overlay for the product sub-pages as well...
+ */
+.page-produkte {
+}
+
+.page-produkte .entry-content .wp-caption {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-produkte .entry-content .wp-caption .wp-caption-text {
+  position: absolute;
+/* Absolute position the element... */
+  left: 0;
+  right: 0;
+  bottom: 0;
+/* ...to the bottom of the parent container, if not set to static (default) => relative */
+  padding: 0;
+/* Set padding to the link element, so there is no non-linking space */
+  border: none;
+/*background-color: hsla(0,0%,100%,.5);*/
+/* White */
+  background-color: hsla(0,0%,0%,.5);
+/* Black */
+  border-radius: 0 0 3px 3px;
+}
+
+.page-produkte .entry-content .wp-caption .wp-caption-text a {
+  display: block;
+  padding: .75rem 1.25rem;
+/* Default Heading Style */
+/*color: #484c51;*/
+/* Black */
+  color: #fff;
+/* White */
+/*font-size: 1.618em;*/
+/* h3 */
+/* This should really be done through a class, so that you can then in the end define a smaller font-size for headlines, etc. for mobile... */
+/* Do it! */
+/* Aaaand the class is: .gamma or .h3 => .h3 seems more logical... but for now it is .gamma.. */
+/* .h3 is inside bootstrap and also sets margin-bottom... => Would have to get negated then... */
+/* .gamma is this 1.618em and .h3 is 1.75rem, maybe generally it is a good idea to use rem for this kind, so it is always the same size and not dependand on other stuff... */
+/* Example: Sidebar .h3 will then become the original h3, but it should be smaller? -_- */
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.page-produkte .entry-content .wp-caption .wp-caption-text a:hover,
+.page-produkte .entry-content .wp-caption .wp-caption-text a:focus {
+  text-decoration: none;
+  color: #fff;
+/* White */
+}
+
+/* Default WordPress Caption Styles */
+.wp-caption .wp-caption-text {
+/*text-align: left;*/
+/*font-style: italic;*/
+/*border-bottom: 2px solid rgba(0,0,0,.05);*/
+/*padding: 1em 0;*/
+}
+
+
+/* Produkte */
+.main-selection-container {
+  display: flex;
+  width: calc(100% + 60px);
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: 30px;
+  margin-top: -30px;
+}
+
+.main-selection-item {
+  max-width: calc(50% - 20px);
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.main-selection-container a h1 {
+  color: #fff !important;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-weight: 500;
+  font-size: 45px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  border-bottom: 1px dotted white;
+  margin: 0;
+}
+
+.main-selection-container a img {
+  width: auto;
+  height: 100%;
+  max-width: initial;
+}

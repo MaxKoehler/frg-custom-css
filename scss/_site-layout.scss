@@ -1,0 +1,38 @@
+/**
+ * Site-Content Background
+ */
+.content-area,
+.widget-area {
+  background-color: $content-background-color;
+}
+
+@media (min-width: $desktop) {
+  body {
+    // background-image: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/05/purty_wood.png);
+    background-color: pink;
+  }
+}
+
+@media (min-width: $desktop) {
+  .content-area,
+  .widget-area {
+    padding: 1.618em;
+    border-radius: 5px;
+  }
+}
+/*
+=> Dann benötigt das Standard Template Content+Sidebar weißen Hintergrund...
+ */
+
+.content-area {
+  padding: 40px 40px 10px !important;
+  margin-right: 20px !important;
+}
+.content-area {
+  padding: 40px;
+  margin-right: 20px !important;
+}
+
+.hentry {
+  margin: 0;
+}

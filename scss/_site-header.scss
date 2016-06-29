@@ -1,0 +1,51 @@
+.site-header {
+  padding: 0;
+  height: 360px;
+  margin-bottom: 50px;
+}
+
+.site-header .custom-logo-link {
+  width: 250px;
+  height: 250px;
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/FRG-Logo-Redesign.png) no-repeat;
+  background-size: contain;
+  border: 10px solid rgba(255,255,255,0.3);
+  border-radius: 125px;
+  margin-left: -10px;
+}
+
+.site-header .custom-logo-link img {
+  display: none;
+}
+
+.header-icons-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 5px;
+  right: 5px;
+}
+
+.header-icons-container > a {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  transition: all .5s ease;
+}
+
+.header-icons-container > a:hover {
+  transform: scale(1.1);
+  transition: all .15s ease-in-out;
+}
+
+.header-icons-container > a > div {
+  height: 100%;
+}
+
+.header-icon-1 {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/header-icon-googlemaps.svg);
+}
+
+.header-icon-2 {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/header-icon-fb.svg);
+}

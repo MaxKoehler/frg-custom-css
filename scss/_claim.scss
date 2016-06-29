@@ -1,0 +1,33 @@
+.claim {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 2em;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.7);
+  display: flex;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  flex-wrap: wrap;
+  left: calc(50% - 250px);
+  top: -4em;
+}
+
+.claim p {
+  margin: 0;
+}
+
+.claim-text-2:after, .claim-text-1:after {
+  width: 100%;
+  content: "";
+  height: 1px;
+  border-top: 1px dotted white;
+  display: block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+  margin-top: -.15em;
+}

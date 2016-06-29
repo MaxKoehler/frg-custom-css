@@ -1,0 +1,164 @@
+/**
+ * Table of Content
+ *
+ * - Hide Title
+ * - Typography
+ *   - Headings
+ */
+
+
+// unused:
+@import "custom-utilities";
+
+@import "variables";
+
+// @import "typography";
+// @import "sidebar";
+// @import "content-utilities";
+// @import "gadgets";
+
+// @import "main"; // ? // => site-layout
+// @import "global-layout"; // => site-layout
+@import "site-layout";
+
+
+@import "page-utilities";
+@import "page-ueber-uns";
+@import "page-produkte";
+@import "page-home";
+
+// Site-Layout
+  // Site-Header
+  // Site-Content
+  // Site-Aside (Sidebar)
+  // Site-Footer
+
+// Page-Layout
+  // Entry-Header
+  // Entry-Content
+  // Entry-Footer
+
+
+// - HideTitle()
+
+/************************************/
+/* J - CSS */
+/************************************/
+
+
+.entry-header {
+  // border-bottom: 0;
+  // margin-bottom: 30px !important;
+  // margin-left: -20px;
+  // width: calc(100% + 40px);
+  // margin-top: -20px;
+  // border: none !important;
+  // max-height: 553px;
+  // overflow: hidden;
+  // position: relative;
+}
+
+
+/* pages without featured image */
+
+/**
+ * Pages with a featured image
+ */
+article.has-post-thumbnail {
+  .entry-title {
+    background: lime;
+  }
+}
+
+.page-service .entry-header,
+.page-ueber-uns .entry-header,
+.page-kontakt .entry-header {
+  // border-bottom: 0;
+  // max-height: 500px;
+  // overflow: hidden;
+  // margin-bottom: 30px !important;
+  // position: relative;
+  // margin-top: 0;
+}
+
+
+
+
+h1.entry-title {
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  // background: white;
+  // margin: 0;
+  // padding-top: 30px;
+  // padding-left: 20px;
+}
+
+
+
+.entry-content {
+  border-top: 1px dotted rgba(0,0,0,0.2);
+  padding-top: 40px;
+}
+
+.home .entry-content,
+.page-produkte .entry-content {
+  // border-top: none;
+  // padding-top: 0;
+}
+
+
+
+.page-service h1,
+.page-ueber-uns h1,
+.page-kontakt h1 {
+  // position: initial;
+  // bottom: initial;
+  // width: initial;
+  // background: initial;
+  // margin: initial;
+  // padding-top: initial;
+}
+
+
+@import "preloader";
+@import "back-to-top";
+@import "slideshow";
+@import "main-navigation";
+@import "claim";
+@import "site-header";
+
+
+/* CONTENT */
+
+
+.home .entry-title {
+  display: block;
+}
+
+@import "share-daddy";
+
+.site-content div.col-full,
+.site-footer div.col-full {
+  max-width: 100%;
+  width: 1100px;
+  padding: 0;
+  /*
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  */
+  display: flex;
+  justify-content: center;
+}
+
+.widget-area {
+  width: 25%;
+}
+
+.site-content {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+
+@import "site-footer";

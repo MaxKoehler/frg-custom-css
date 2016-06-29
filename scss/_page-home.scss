@@ -1,0 +1,175 @@
+.home .content-area {
+  // width: 100% !important;
+  // max-width: 100% !important;
+  // padding: 20px !important;
+  // margin-right: 0 !important;
+}
+.home-main {
+  // margin-bottom: 0;
+}
+.home .hentry,
+.home .site-main {
+  // margin: 0;
+}
+
+
+.start .sharedaddy {
+  margin-top: 0;
+}
+
+
+
+
+.panorama {
+  height: 360px;
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/360.jpg) center;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro > * {
+  z-index: 1;
+  position: relative;
+}
+
+.intro {
+  color: white !important;
+  margin: auto;
+  padding-left: 40px;
+  padding-top: 50px;
+}
+
+.intro:after {
+  background-image: -ms-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
+  background-image: -moz-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
+  background-image: -o-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#7C0029),color-stop(100,#A0002E));
+  background-image: -webkit-linear-gradient(bottom,#7C0029 0%,#A0002E 100%);
+  background-image: linear-gradient(to top,#7C0029 0%,#A0002E 100%);
+  content: "";
+  width: 680px;
+  height: 680px;
+  display: block;
+  position: absolute;
+  border-radius: 340px;
+  top: -170px;
+  left: -340px;
+  z-index: 0;
+  opacity: .95;
+}
+
+.schritte {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.schritt-2 {
+  border-left: 1px dotted rgba(0,0,0,0.2);
+  border-right: 1px dotted rgba(0,0,0,0.2);
+}
+
+.schritte:before, .schritte:after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  background: white;
+  height: 40px;
+}
+
+.schritte:after {
+  bottom: 0;
+  left: 0;
+}
+
+.schritte > div {
+  width: 33.33%;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.schritte h2 {
+  width: auto;
+  padding-top: 20px;
+  height: 70px;
+}
+
+.schritte p {
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.schritte > div > h2 {
+  border-bottom: 1px dotted;
+}
+
+.icon-1, .icon-2, .icon-3 {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 10px;
+  transform: translate(-10px);
+  margin-bottom: 20px;
+}
+
+.icon-1:before, .icon-2:before, .icon-3:before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+}
+
+.icon-1 {
+  background-image: -ms-linear-gradient(bottom,#004A7C 0%,#0067ad 100%);
+  background-image: -moz-linear-gradient(bottom,#004A7C 0%,#0067ad 100%);
+  background-image: -o-linear-gradient(bottom,#004A7C 0%,#0067ad 100%);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#004A7C),color-stop(100,#0067ad));
+  background-image: -webkit-linear-gradient(bottom,#004A7C 0%,#0067ad 100%);
+  background-image: linear-gradient(to top,#004A7C 0%,#0067ad 100%);
+}
+
+.icon-1:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-1.svg);
+}
+
+.schritt-1 h2 {
+  color: #004a7c !important;
+}
+
+.icon-2 {
+  background-image: -ms-linear-gradient(bottom,#E99900 0%,#f2c100 100%);
+  background-image: -moz-linear-gradient(bottom,#E99900 0%,#f2c100 100%);
+  background-image: -o-linear-gradient(bottom,#E99900 0%,#f2c100 100%);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#E99900),color-stop(100,#f2c100));
+  background-image: -webkit-linear-gradient(bottom,#E99900 0%,#f2c100 100%);
+  background-image: linear-gradient(to top,#E99900 0%,#f2c100 100%);
+}
+
+.icon-2:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-2.svg);
+}
+
+.schritt-2 h2 {
+  color: #e99900 !important;
+}
+
+.icon-3 {
+  background-image: -ms-linear-gradient(bottom,#007c06 0%,#00AD08 100%);
+  background-image: -moz-linear-gradient(bottom,#007c06 0%,#00AD08 100%);
+  background-image: -o-linear-gradient(bottom,#007c06 0%,#00AD08 100%);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,#007c06),color-stop(100,#00AD08));
+  background-image: -webkit-linear-gradient(bottom,#007c06 0%,#00AD08 100%);
+  background-image: linear-gradient(to top,#007c06 0%,#00AD08 100%);
+}
+
+.icon-3:before {
+  background: url(http://familienradgeber.com/wordpress/wp-content/uploads/2016/06/Icon-3.svg);
+}
+
+.schritt-3 h2 {
+  color: #007C06 !important;
+}

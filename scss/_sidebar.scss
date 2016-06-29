@@ -1,0 +1,26 @@
+/**
+ * Sidebar
+ */
+/**
+ * Widgets
+ */
+/**
+ * Widget-Title
+ */
+/* Storefront Default */
+.widget h2.widgettitle,
+.widget h3.widget-title {
+  font-size: 1.387em;
+  letter-spacing: 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  padding: 0 0 1em;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+
+/* Fix */
+.widget h2.widgettitle,
+.widget h3.widget-title {
+  font-size: 1.387em;
+  letter-spacing: 1px;
+}

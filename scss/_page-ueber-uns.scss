@@ -1,0 +1,81 @@
+/* Über uns */
+.page-ueber-uns {
+}
+
+.page-ueber-uns .list-employees {
+  margin-left: 0;
+  list-style: none;
+}
+
+@media (min-width: 569px) {
+  .page-ueber-uns .list-employees {
+    position: relative;
+  }
+
+  .page-ueber-uns .list-employees img {
+    position: absolute;
+    left: 0;
+  }
+
+  .page-ueber-uns .list-employees > li {
+  /* 132 (image) + 16 (1em) = 148px */
+    margin-left: 148px;
+  }
+}
+
+@media (min-width: 768px) {
+
+}
+
+/**
+ * Image List (Das Team)...
+ */
+/*
+Probleme bei Namensgebung, ob entweder über .page-das-team oder, und einer Container Klasse oder einer Klasse für die spezielle Liste... Oder als :first-child, aber das macht irgendwie wenig Sinn? Villeicht doch...
+ */
+.page-ueber-uns .entry-content ul {
+/*margin: 0 0 1.618em 3em;*/
+/*margin-left: calc(1.618em*9.5);*/
+/* First Mobile List */
+/* margin-left: 0; */
+/* list-style: none; */
+}
+
+.page-ueber-uns .entry-content ul li {
+/* position: relative; */
+/* display: flex; */
+/* flex-direction: column; */
+}
+
+.page-ueber-uns .entry-content ul li p:last-child {
+/*order: -1;*/
+/* Set as 1. Element */
+/*position: absolute;*/
+/*left: 0;*/
+/*top: 0;*/
+/*width: calc(1.618em*9);*/
+/*transform: translateX(calc(-100% - 1.618em*0.5));*/
+}
+
+.page-ueber-uns .entry-content ul li p:last-child img {
+/* max-width: 100%; */
+/* width: 100%; */
+/* height: auto; */
+/*border-width: calc(1.618em*2);*/
+/*border-style: solid;*/
+}
+
+.page-ueber-uns .entry-content ul li:first-child p:last-child img {
+/* border-color: #6fcbf3; */
+/* Light-Blue */
+}
+
+.page-ueber-uns .entry-content ul li:nth-child(2) p:last-child img {
+/* border-color: #004a7c; */
+/* Dark-Blue */
+}
+
+.page-ueber-uns .entry-content ul li:last-child p:last-child img {
+/* border-color: #e99900; */
+/* Dark-Blue */
+}
